@@ -1,0 +1,52 @@
+body, html{
+	width: 100%;
+	height: 100%;
+	margin:0px;
+	background-color:rgb(40,40,40);
+}
+
+
+#MainContainer{
+	width: 100%;
+	height: 100%;
+	margin:0px;
+	position: absolute;
+}
+
+#MainHeadingContainer{
+	width: 100%;
+	text-align: center;
+	text-transform:uppercase;
+	padding-top:0px;
+	margin-top: -200px;
+}
+
+#ImgContainer{
+	width:350; 
+	height:322;
+	padding-bottom: 0px;
+	text-align: center;
+	margin-top: 20%;
+	position: 
+
+
+}
+
+#ListContainer{
+		text-align: center;
+
+}
+
+#Ulcontainer li{
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	padding-right:15px;
+	text-transform: uppercase;
+
+}
+
+h1{
+	color: white;
+	font-size:100px;
+}
