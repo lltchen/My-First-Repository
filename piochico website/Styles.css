@@ -2,7 +2,7 @@ body, html{
 	width: 100%;
 	height: 100%;
 	margin:0px;
-	background-color:rgb(40,40,40);
+	
 }
 
 
@@ -11,24 +11,22 @@ body, html{
 	height: 100%;
 	margin:0px;
 	position: absolute;
+
+}
+#topnavcontainer{
+	width: 100%
 }
 
-#MainHeadingContainer{
-	width: 100%;
+.topnav li{
 	text-align: center;
-	text-transform:uppercase;
-	padding-top:0px;
-	margin-top: -200px;
+	text-decoration: none;
+	display: inline-block;
+	padding-right:15px;
+	text-transform: uppercase;
 }
 
-#ImgContainer{
-	width:350; 
-	height:322;
-	padding-bottom: 0px;
-	text-align: center;
-	margin-top: 20%;
-	position: 
-
+.navleft {
+	text-align: right;
 
 }
 
@@ -43,10 +41,7 @@ body, html{
 	display: inline-block;
 	padding-right:15px;
 	text-transform: uppercase;
+	color: rgba(225,225,225,.9	rgba);
 
-}
 
-h1{
-	color: white;
-	font-size:100px;
 }
