@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2010 Kevin Decker (http://www.incaseofstairs.com/)
+ See LICENSE for license information
+-->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>border-image-generator</title>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/ui-darkness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/ui-lightness/jquery-ui.css" id="lightnessStyle">
+    <link rel="stylesheet" type="text/css" href="css/border-image-generator.css">
+    <link rel="stylesheet" type="text/css" href="css/border-image-generator-standalone.css">
+</head>
+<body class="borderGenerator no-local">
+    <div class="wrapper">
+    <div class="header">
+        <h1>border-image-generator</h1>
+        <a class="toggleStyle" href="#">[toggle style]</a>
+    </div>
+    <div class="content">
+        <h2>Editor</h2>
+        <div class="errorMsg"></div>
+        <div id="editorEl" style="display: none">
+            <img id="imageEl">
+            <!-- Note that we expect this ordering -->
+            <div id="dividerTop" class="divider top-divider"></div>
+            <div id="dividerLeft" class="divider left-divider"></div>
+            <div id="dividerBottom" class="divider bottom-divider"></div>
+            <div id="dividerRight" class="divider right-divider"></div>
+        </div>
+
+        <div>
+            <label for="pathToImage">Image:</label><input type="text" id="pathToImage">
+            <span class="fileInput localDependent">
+                <input type="button" value="Browse...">
+                <input type="file" accept="image/*" id="localImage">
+            </span>
+        </div>
+
+        <div class="setupSection">
+            <div><label for="imageTop">Top Offset:</label><div id="imageTop" class="slider image-offset"></div></div>
+            <div><label for="imageRight">Right Offset:</label><div id="imageRight" class="slider image-offset"></div></div>
+            <div><label for="imageBottom">Bottom Offset:</label><div id="imageBottom" class="slider image-offset"></div></div>
+            <div><label for="imageLeft">Left Offset:</label><div id="imageLeft" class="slider image-offset"></div></div>
+            <div><label for="fillCenter">Fill Center:</label><input id="fillCenter" type="checkbox"></div>
+        </div>
+
+        <div>
+            <div id="borderOptionsExpander">
+                <span class="ui-icon ui-icon-triangle-1-e"></span>
+                <a href="#">Border Size</a>
+            </div>
+            <div id="borderOptions" class="setupSection" style="display: none">
+                <div><label for="borderTop">Top Border:</label><div id="borderTop" class="slider border-width"></div></div>
+                <div><label for="borderRight">Right Border:</label><div id="borderRight" class="slider border-width"></div></div>
+                <div><label for="borderBottom">Bottom Border:</label><div id="borderBottom" class="slider border-width"></div></div>
+                <div><label for="borderLeft">Left Border:</label><div id="borderLeft" class="slider border-width"></div></div>
+            </div>
+        </div>
+
+        <div>
+            <div id="repeatOptionsExpander">
+                <span class="ui-icon ui-icon-triangle-1-e"></span>
+                <a href="#">Border Repeat</a>
+            </div>
+            <div id="repeatOptions" class="setupSection" style="display: none">
+                <!-- SPEC: The spec also defined a Space option, but no browser currently supports this so leaving this out... -->
+                <div>
+                    <label for="repeatVertical">Vertical Repeat:</label>
+                    <select id="repeatVertical" class="repeat">
+                        <option value="stretch">Stretch</option>
+                        <option value="repeat">Repeat</option>
+                        <option value="round">Round</option>
+                    </select>
+                    <span id="warnRepeatVert" class="warning"></span>
+                </div>
+                <div>
+                    <label for="repeatHorizontal">Horizontal Repeat:</label>
+                    <select id="repeatHorizontal" class="repeat">
+                        <option value="stretch">Stretch</option>
+                        <option value="repeat">Repeat</option>
+                        <option value="round">Round</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="css">
+        <h2>Preview</h2>
+        <div id="cssEl"></div>
+    </div>
+
+    <div class="footer">
+            <a href="http://www.incaseofstairs.com/">incaseofstairs</a>
+	    |
+            <a href="http://twitter.com/kpdecker">@kpdecker</a>
+	    |
+            <a href="http://gradient-scanner.com">gradient-scanner</a>
+            |
+            <a href="http://github.com/kpdecker/border-image-generator">border-image-generator @ github</a>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="lib/json2.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.ui.resizable.min.js"></script>
+    <script type="text/javascript" src="lib/user-image-cache/user-image-cache.js"></script>
+    <script type="text/javascript" src="history-handler.js"></script>
+    <script type="text/javascript" src="expander.js"></script>
+    <script type="text/javascript" src="border-image-generator.js"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15628919-2");
+pageTracker._setDomainName(".border-image.com");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
